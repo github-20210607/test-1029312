@@ -1,4 +1,2 @@
 Z:\documents\templates\typescript-project\exclusion.txt
 Z:\documents\templates\typescript-project\node_module
-Z:\documents\templates\typescript-project\.git
-Z:\documents\templates\typescript-project\.gitignore
