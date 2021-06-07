@@ -3,4 +3,6 @@ disabled:
   - unused_use
 finder:
   not-name:
-    - unused_use
+    - index.php
+    - server.php
+    - dev1
