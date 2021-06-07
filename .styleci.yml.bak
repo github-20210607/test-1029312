@@ -6,3 +6,4 @@ finder:
     - index.php
     - server.php
     - dev1
+    - dev2
