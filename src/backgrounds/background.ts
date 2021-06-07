@@ -29,7 +29,9 @@ chrome.commands.onCommand.addListener((command: string, tab: any) => {
           chrome.tabs.sendMessage(tab["id"], { command: "execute" });
         },
       },
-      () => {}
+      () => {
+        console.log("contextmenus created");
+      }
     );
   }
 })();
