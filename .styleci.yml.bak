@@ -3,3 +3,5 @@ disabled:
   - unused_use
 finder:
   not-name:
+    - unused_use
+    - unused_use
