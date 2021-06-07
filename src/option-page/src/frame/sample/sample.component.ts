@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from './../../environments/environment';
 import { SampleService } from './sample.service';
 
@@ -7,7 +7,7 @@ import { SampleService } from './sample.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class SampleComponent {
   appName: string = environment.APP_NAME;
   description: string = 'description';
 
@@ -20,6 +20,4 @@ export class HeaderComponent implements OnInit {
     // change service varibles value
     this.sampleService.text.next('new value');
   }
-
-  ngOnInit(): void {}
 }

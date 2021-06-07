@@ -10,8 +10,6 @@ const chromeStorage = new ChromeStorage();
 export class IndexComponent {
   title = 'index';
 
-  constructor() {}
-
   ngOnInit() {
     this.main();
   }

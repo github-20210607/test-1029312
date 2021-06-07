@@ -10,8 +10,6 @@ const chromeStorage = new ChromeStorage();
 export class UpdateComponent {
   title = 'update';
 
-  constructor() {}
-
   ngOnInit() {
     this.main();
   }

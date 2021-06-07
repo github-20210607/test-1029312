@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-global',
   templateUrl: './navigation-global.component.html',
   styleUrls: ['./navigation-global.component.scss'],
 })
-export class NavigationGlobalComponent implements OnInit {
+export class NavigationGlobalComponent {
   items: Array<string> = [
     'Top',
     'Usage',
@@ -16,8 +16,4 @@ export class NavigationGlobalComponent implements OnInit {
     'Download',
     'Contact',
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

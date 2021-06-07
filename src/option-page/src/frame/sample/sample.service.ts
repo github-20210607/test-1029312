@@ -6,5 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class SampleService {
   text: Subject<any> = new Subject();
-  constructor() {}
+  constructor() {
+    // do something
+  }
 }

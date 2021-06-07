@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-free-b',
   templateUrl: './free-b.component.html',
-  styleUrls: ['./free-b.component.scss']
+  //styleUrls: ['./free-b.component.scss']
 })
-export class FreeBComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class FreeBComponent {}

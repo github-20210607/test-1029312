@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { environment } from './../../environments/environment';
 
 @Component({
@@ -6,12 +6,8 @@ import { environment } from './../../environments/environment';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   appName: string = environment.APP_NAME;
   description: string =
     'This site is hypixel auction tracker... just bookmark!';
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
