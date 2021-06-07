@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from './../../environments/environment';
-import { HeaderService } from './header.service';
 
 @Component({
   selector: 'app-header',
@@ -12,11 +11,7 @@ export class HeaderComponent implements OnInit {
   description: string =
     'This site is hypixel auction tracker... just bookmark!';
 
-  constructor(private headerService: HeaderService) {
-    this.headerService.descriptionSubject.subscribe((item: string) => {
-      this.description = item;
-    });
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
