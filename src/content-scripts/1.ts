@@ -27,13 +27,15 @@ const execute = async () => {
 };
 
 (async function main() {
-  // add massage event from background
-  new Promise(async (resolve: Function) => {
+  // sample code of receive message from background scripts
+  await new Promise(async (resolve: Function) => {
     chrome.runtime.onMessage.addListener(function (
-      request,
+      _request,
       _sender,
       _sendResponse
-    ) {});
+    ) {
+      resolve();
+    });
   });
 
   execute();
