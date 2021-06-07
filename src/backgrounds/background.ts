@@ -55,8 +55,9 @@ chrome.browserAction.onClicked.addListener(() => {
 /**
  * add message event from content-scripts
  */
-new ChromeMessage().addListener("command", (request: any) => {
-  return new Promise(async (resolve) => {
-    resolve("");
+new ChromeMessage().addListener("command", (_request: any) => {
+  return new Promise(async (resolve: Function) => {
+    console.log("command message recived");
+    resolve();
   });
 });
