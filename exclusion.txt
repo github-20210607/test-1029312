@@ -1,2 +1,3 @@
-Z:\documents\templates\typescript-project\exclusion.txt
-Z:\documents\templates\typescript-project\node_module
+Y:\documents\templates\chrome-extension\exclusion.txt
+Y:\documents\templates\chrome-extension\node_module
+Y:\documents\templates\chrome-extension\src\option-page\node_modules

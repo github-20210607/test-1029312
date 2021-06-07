@@ -1,11 +1,25 @@
 const path = require("path");
-const fs = require("fs");
+const fs = require("fs-extra");
 const Obfuscator = require("webpack-obfuscator");
 
 const outputDirPath = "./dist";
-fs.rmdirSync(outputDirPath, { recursive: true });
-fs.mkdirSync(outputDirPath);
-//fs.copyFileSync("./index.html", outputDirPath + "/index.html");
+
+fs.removeSync(outputDirPath);
+fs.ensureDirSync(outputDirPath + "/resources/images/icons");
+
+fs.copyFileSync("./src/manifest.json", outputDirPath + "/manifest.json");
+fs.copyFileSync(
+  "./src/resources/images/icons/16x16.png",
+  outputDirPath + "/resources/images/icons/16x16.png"
+);
+fs.copyFileSync(
+  "./src/resources/images/icons/48x48.png",
+  outputDirPath + "/resources/images/icons/48x48.png"
+);
+fs.copyFileSync(
+  "./src/resources/images/icons/128x128.png",
+  outputDirPath + "/resources/images/icons/128x128.png"
+);
 
 module.exports = (_env, argv) => {
   let plugins;
@@ -47,10 +61,12 @@ module.exports = (_env, argv) => {
   return {
     devtool: argv.mode == "production" ? false : "source-map",
     entry: {
-      1: "./src/index.ts",
+      "backgrounds/background": "./src/backgrounds/background.ts",
+      "content-scripts/1": "./src/content-scripts/1.ts",
+      "inject-scripts/1": "./src/inject-scripts/1.ts",
     },
     output: {
-      filename: "jquery.min.js",
+      filename: "[name].js",
       path: path.resolve(__dirname, outputDirPath),
     },
     resolve: {

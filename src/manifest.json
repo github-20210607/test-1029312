@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "chrome-extension",
+  "description": "chrome extension template",
+  "version": "16",
+  "icons": {
+    "16": "./resources/images/icons/16x16.png",
+    "48": "./resources/images/icons/48x48.png",
+    "128": "./resources/images/icons/128x128.png"
+  },
+  "options_page": "/option-page/index.html#index",
+  "background": {
+    "scripts": ["/backgrounds/background.js"],
+    "persistent": true
+  },
+  "commands": {
+    "sample": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "description"
+    }
+  },
+  "browser_action": {},
+  "content_scripts": [
+    {
+      "matches": ["https://example.com/*"],
+      "js": ["./content-scripts/1.js"],
+      "all_frames": false
+    }
+  ],
+  "permissions": ["*://exmaple.com/", "storage", "tabs", "contextMenus"],
+  "web_accessible_resources": ["/inject-scripts/1.js"]
+}
